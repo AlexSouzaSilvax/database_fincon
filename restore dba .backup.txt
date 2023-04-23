@@ -1,0 +1,16 @@
+Como fazer o restore PostgreSQL
+Através do prompt de comando:
+
+Localize a pasta de instalação do PostgreSQL (c:\Arquivos de Programas\PostgreSQL\9.0\bin) especificamente a pasta bin, pois dentro dela está localizado o executável pg_restore.exe que fará o restore.
+Digite o comando:
+pg_restore.exe –host localhost –port 5432 –username postgres –dbname ManagerEDoc c:\nome_arquivo_exportado.backup
+
+pg_restore.exe --host localhost --port 5432 --username postgres --dbname ManagerEDoc c:\nome_arquivo_exportado.backup
+Vamos ver o que significa cada trecho deste comando:
+
+ –host localhost: define o local onde o banco se encontra, pode ser localmente ou externamente em outra rede.
+ –port 5432: é definida a porta utilizada, nesse caso a padrão postgres 5432.
+ –username postgres: define qual é o usuário utilizado na comunicação.
+ –dbname ManagerEDoc: o nome do banco que se estará exportando, atenção neste ponto, pois é case sensitive, ou seja ele considera letras maiúsculas e minúsculas.
+c:\nome_arquivo_exportado.backup:  por último, vai o caminho completo do arquivo que deseja restaurar.
+Pronto, basta executar o comando e verificar se o banco foi restaurado com sucesso.

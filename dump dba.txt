@@ -1,0 +1,4 @@
+Abrir CMD no caminho 
+C:\Program Files\PostgreSQL\14\bin
+
+pg_dump -U postgres -W -F t fincon > C:\Projects\Fincon\DBA\BKP_FINCON_23-04-23.sql
